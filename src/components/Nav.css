@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;500&display=swap');
+
+
+.nav {
+	width: 100%;
+	background-color: black;
+    color: white;
+}
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1400px;
+	margin: 0 auto;
+	height: 10vh;
+	background-color: black;
+}
+.nav-contact {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+    font-size: 20px;
+}
+.nav-contact-info {
+	margin-left: 10px;
+}
+.nav-contact-number {
+	font-weight: bold;
+}
+.nav-items {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	list-style: none;
+}
+.nav-item a{
+	margin: 100px;
+    font-family: 'Merienda', Courier, monospace;
+	font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-basket {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.icon-phone {
+	size: 50px;
+	font-size: 50px;
+	color: aqua;
+}
+
+.logo {
+	height: 60px;
+	pointer-events: none;
+	animation: App-logo-spin infinite 5s linear;
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(119deg) brightness(104%) contrast(101%);
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

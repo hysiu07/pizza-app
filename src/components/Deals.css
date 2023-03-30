@@ -1,0 +1,43 @@
+.deals {
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+.deals-title {
+	margin: 30px 30px;
+	font-family: 'Merienda', Courier, monospace;
+}
+.deals-text {
+	font-size: 20px;
+}
+
+.slider-box {
+	cursor: pointer;
+	transition: 0.3s;
+}
+.slider-img {
+	margin: 0 auto;
+	border-radius: 20px 0 20px 0;
+}
+.slider-imgn {
+	width: 100px;
+	height: 100px;
+}
+.slider-box::before {
+	content: 'PROMOCJA';
+	position: relative;
+	padding: 10px;
+	top: 80px;
+	right: 103px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+}
+.slider-title {
+	margin: 10px;
+	letter-spacing: 0.1px;
+	font-family: 'Merienda', Courier, monospace;
+}
+.slider-box:hover {
+	transform: scale(0.9);
+}
