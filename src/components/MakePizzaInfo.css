@@ -1,0 +1,13 @@
+.make-pizza-info {
+	height: 500px;
+	width: 100vw;
+	background-position: center;
+	background-size: cover;
+    background-attachment: fixed;
+}
+.make-pizza-info-shadow {
+  
+	width: 100%;
+	height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
