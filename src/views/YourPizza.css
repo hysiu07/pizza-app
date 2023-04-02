@@ -1,0 +1,15 @@
+.your-pizza {
+	height: 90vh;
+	width: 100%;
+	background-image: url('/public/img/makepizza.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.you-pizza-shadow {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+}
+.your-pizza-components{
+    padding: 10%;
+}

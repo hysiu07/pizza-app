@@ -2,6 +2,8 @@ import './App.css';
 import MainView from './views/MainView';
 import ChoiceInDeals from './components/ChoiceInDeals';
 import React, {useState}  from 'react';
+import AppRoutes from './routes/AppRoutes';
+import Nav from './components/Nav';
 
 function App() {
 
@@ -66,8 +68,10 @@ const [cost, setCost] = useState(0)
 	return (
 		<div className='App'>
 		
-			
-			<MainView pizzas={pizzas} />
+			<Nav />
+		
+			<AppRoutes pizzas={pizzas} />
+
 		</div>
 	);
 }

@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;500&display=swap');
 
-
 .nav {
+	
+	top: 0;
 	width: 100%;
 	background-color: black;
-    color: white;
+	color: white;
 }
 .nav-container {
 	display: flex;
@@ -18,13 +19,18 @@
 	display: flex;
 	align-items: center;
 	padding: 10px 20px;
-    font-size: 20px;
+	font-size: 20px;
+}
+.nav-contact-text {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .nav-contact-info {
 	margin-left: 10px;
 }
 .nav-contact-number {
 	font-weight: bold;
+	margin-bottom: 0;
 }
 .nav-items {
 	display: flex;
@@ -32,12 +38,12 @@
 	height: 100%;
 	list-style: none;
 }
-.nav-item a{
+.nav-item a {
 	margin: 100px;
-    font-family: 'Merienda', Courier, monospace;
+	font-family: 'Merienda', Courier, monospace;
 	font-size: 25px;
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 .nav-basket {
@@ -48,12 +54,12 @@
 	cursor: pointer;
 }
 
-
 .logo {
 	height: 60px;
 	pointer-events: none;
 	animation: App-logo-spin infinite 5s linear;
-    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(119deg) brightness(104%) contrast(101%);
+	filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(119deg)
+		brightness(104%) contrast(101%);
 }
 
 @keyframes App-logo-spin {
