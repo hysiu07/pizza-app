@@ -1,0 +1,16 @@
+.basket {
+	background-color: white;
+	position: fixed;
+	z-index: 200;
+	cursor: auto;
+	right: -300px;
+	top: 0;
+	height: 100vh;
+	width: 30vw;
+}
+.basket-close-btn{
+    display: inline;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}

@@ -1,5 +1,32 @@
 .ingredients {
-	height: 80%;
-	width: 40%;
-    background-color: white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	padding: 50px;
+	margin-right: 20px;
+	height: 100%;
+	width: 60%;
+	background-color: white;
+	border-radius: 10px;
+	opacity: 0.7;
+}
+
+
+.ingredients-checkbox {
+	transform: scale(1.5);
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.ingredients-name {
+	font-size: 25px;
+	margin: 5px;
+}
+.ingredients-img {
+	width: 50px;
+	margin: 0 5px;
+}
+.ingredien-box {
+	margin: 5px;
 }

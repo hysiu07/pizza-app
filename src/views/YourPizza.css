@@ -8,8 +8,18 @@
 .you-pizza-shadow {
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.7);
 }
-.your-pizza-components{
-    padding: 10%;
+.your-pizza-components {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding: 4% 5%;
+}
+
+.you-pizza-components-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 40%;
 }

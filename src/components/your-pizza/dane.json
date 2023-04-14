@@ -1,0 +1,68 @@
+[
+	
+	{
+		"name": "ananas",
+		"cost": 1.2
+	},
+	{
+		"name": "arugulu",
+		"cost": 1
+	},
+	{
+		"name": "champignons",
+		"cost": 2
+	},
+	{
+		"name": "chees",
+		"cost": 0
+	},
+	{
+		"name": "chili",
+		"cost": 2
+	},
+	{
+		"name": "corn",
+		"cost": 1.3
+	},
+	{
+		"name": "garlic",
+		"cost": 0.8
+	},
+	{
+		"name": "ham",
+		"cost": 3
+	},
+	{
+		"name": "mozzarela",
+		"cost": 2.5
+	},
+	{
+		"name": "olives",
+		"cost": 4
+	},
+	{
+		"name": "onion",
+		"cost": 1
+	},
+	{
+		"name": "pepper",
+		"cost": 3.5
+	},
+	{
+		"name": "pepperoni",
+		"cost": 4
+	},
+	{
+		"name": "salmon",
+		"cost": 6
+	},
+	{
+		"name": "shrimps",
+		"cost": 5.5
+	},
+	{
+		"name": "tomato",
+		"cost": 1.6
+	}
+  
+]
