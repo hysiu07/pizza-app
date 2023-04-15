@@ -39,6 +39,8 @@ const Deals = (props) => {
 								</div>
 							);
 						}
+						console.log(pizza);
+			
 					})}
 				</Slider>
 				

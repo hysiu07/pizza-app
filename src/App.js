@@ -1,14 +1,15 @@
 import './App.css';
-import MainView from './views/MainView';
-import ChoiceInDeals from './components/ChoiceInDeals';
-import React, {useState}  from 'react';
+
+import React, { createContext, useState } from 'react';
 import AppRoutes from './routes/AppRoutes';
 import Nav from './components/Nav';
+import { BasketContext } from './context/BasketContex';
 
 function App() {
-
 	// main COST
-const [cost, setCost] = useState(0)
+	const [cost, setCost] = useState(0);
+
+	// const BasketContext = createContext(null);
 
 	const pizzas = [
 		{
@@ -57,21 +58,14 @@ const [cost, setCost] = useState(0)
 		},
 	];
 
-	let pizza = {
-		name: 'Americana',
-		price: 25,
-		discount: true,
-		ingredients: 'Pieczarki, pomidory, ser mozzarella, ziołowy sos pomidorowy',
-		img: '/img/americana',
-	};
-
+	const [basketValue, setBasketValue] = useState([]);
+	
 	return (
 		<div className='App'>
-		
-			<Nav />
-		
-			<AppRoutes pizzas={pizzas} />
-
+			<BasketContext.Provider value={ {basketValue, setBasketValue}}>
+				<Nav />
+				<AppRoutes pizzas={pizzas} />
+			</BasketContext.Provider>
 		</div>
 	);
 }

@@ -7,12 +7,16 @@ import { useEffect } from 'react';
 const Ingredients = (props) => {
 	const [products, setProducts] = useState([]);
 
+
+
 	useEffect(() => {
 		data.map((product) => {
 			product.checked = product.cost === 0 ? true : false;
 			return product;
 		});
 		setProducts(data);
+
+		
 	}, []);
 
 	useEffect(() => {
@@ -21,9 +25,11 @@ const Ingredients = (props) => {
 				return currentEl.checked ? sum + currentEl.cost : sum;
 			}, props.base)
 		);
+
+
 	}, [props.base, products]);
 
-
+	
 
 	const addIngredients = (el) => {
 		setProducts(
@@ -33,7 +39,15 @@ const Ingredients = (props) => {
 				}
 				return product;
 			})
+			
 		);
+		props.setCheckedIngredients(products.map((product)=>{
+			if(product.checked){
+				return product.name
+			}
+		}))
+		
+
 	};
 
 	return (

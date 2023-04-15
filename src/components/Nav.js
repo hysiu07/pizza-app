@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import logo from '../pizza.svg';
 import './Nav.css';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,9 @@ import { FaPhone } from 'react-icons/fa';
 import Basket from './Basket';
 
 const Nav = (props) => {
-	const [showBasket, setShowBasket] = useState(false);
+	const [showBasket, setShowBasket] = useState(true);
+
+
 	return (
 		<div className='nav'>
 			<div className='nav-container'>
@@ -37,12 +39,12 @@ const Nav = (props) => {
 						</li>
 					</ul>
 				</div>
-				<div className='nav-basket' onClick={(e)=> {
-					
+				<div className='nav-basket '  onClick={()=> {
+				
 					setShowBasket(!showBasket)
 				}}>
 					<BsBasket2Fill className='nav-basket-icon' size='35px' />
-					<Basket showBasket={showBasket} setShowBasket={setShowBasket} />
+					<Basket   showBasket={showBasket} setShowBasket={setShowBasket} />
 				</div>
 			</div>
 		</div>
