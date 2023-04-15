@@ -1,17 +1,16 @@
-import React, { useState, useContext} from 'react';
+import React, { useState, useContext } from 'react';
 import './ChoiceInDeals.css';
 import { GrClose } from 'react-icons/gr';
 import { BasketContext } from '../context/BasketContex';
 
 const ChoiceInDeals = (props) => {
-
 	const [base, setBase] = useState(10);
 	const { basketValue, setBasketValue } = useContext(BasketContext);
 
 	let summary = props.infopizza.price + base;
 
+	console.log(props.infopizza.img);
 	const addPizzaWithDiscount = () => {
-
 		let size = '';
 		if (base === 7) {
 			size = 'small';
@@ -21,15 +20,15 @@ const ChoiceInDeals = (props) => {
 			size = 'big';
 		}
 		let myPizza = {
-			name: 'your pizza',
+			name: props.infopizza.name,
 			size: size,
 			cost: summary,
-			ingredients: props.infopizza.ingredients ,
-			id:  Date.now(),
+			ingredients: props.infopizza.ingredients,
+			img: props.infopizza.img,
+			id: Date.now(),
 		};
 
 		setBasketValue([...basketValue, myPizza]);
-
 	};
 
 	return (
@@ -45,7 +44,12 @@ const ChoiceInDeals = (props) => {
 					e.stopPropagation();
 				}}
 			>
-				<div className='choice-in-deals-close-btn'>
+				<div
+					className='choice-in-deals-close-btn'
+					onClick={() => {
+						props.closeChoiceInDeals();
+					}}
+				>
 					<GrClose size={'30px'} />
 				</div>
 
@@ -88,10 +92,15 @@ const ChoiceInDeals = (props) => {
 							}}
 						/>
 					</div>
-					<p className='choice-in-deal-summary'>Summary : {summary} USD</p>
-					<button className='choice-in-deal-add-btn' onClick={()=>{
-						addPizzaWithDiscount()
-					}}>Add to your basket</button>
+					<p className='choice-in-deal-summary'> Price: {summary} USD</p>
+					<button
+						className='choice-in-deal-add-btn'
+						onClick={() => {
+							addPizzaWithDiscount();
+						}}
+					>
+						Add to your basket
+					</button>
 				</div>
 			</div>
 		</div>

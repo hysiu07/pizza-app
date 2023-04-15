@@ -8,7 +8,7 @@ const Basket = (props) => {
 	const { basketValue, setBasketValue} = useContext(BasketContext);
 	const [priceInBasket, setPriceInBasket] = useState(0)
 	
-
+console.log(basketValue);
 
 	useEffect(() => {
 		setPriceInBasket(basketValue.reduce((sum, currentPrice) => {
@@ -52,7 +52,7 @@ const Basket = (props) => {
 					{basketValue.map((el,index) => {
 						return (
 							<div className='basket-element' key={index} id={el.id}>
-								<div className='basket-element-img'></div>
+								<div className='basket-element-img' style={{backgroundImage: `url(${el.img})`}}></div>
 								<div className='basket-element-text'>
 									<p className='element-title'>{el.name}</p>
 									<p className='element-size'>{el.size}</p>

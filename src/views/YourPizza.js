@@ -25,6 +25,7 @@ const YourPizza = (props) => {
 			size: size,
 			cost: costYourPizza,
 			ingredients: checkedIngredients,
+			img: '/img/makepizza.jpg',
 			id:  Date.now(),
 		};
 
