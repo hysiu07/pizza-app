@@ -51,7 +51,7 @@ const Deals = (props) => {
 								</div>
 							);
 						}
-						console.log(pizza.img);
+						
 					})}
 				</Slider>
 			</div>

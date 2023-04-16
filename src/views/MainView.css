@@ -1,0 +1,13 @@
+.chat-btn {
+	display: inline;
+    position: fixed;
+    z-index: 200;
+    right: 70px;
+    bottom: 70px;
+	padding: 10px;
+	width: 30px;
+	height: 50px;
+    font-size: 60px;
+    cursor: pointer;
+    color: red;
+}

@@ -11,7 +11,7 @@ import MovingComponent from 'react-moving-text';
 const Nav = (props) => {
 	const [showBasket, setShowBasket] = useState(true);
 	const { basketValue } = useContext(BasketContext);
-	console.log(basketValue.length);
+	
 	return (
 		<div className='nav'>
 			<div className='nav-container'>

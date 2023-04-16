@@ -1,0 +1,14 @@
+.chat-panel{
+    position: fixed;
+    background-color: white;
+    z-index: 300;
+    right: -500px;
+    bottom: 20px;
+    width: 25%;
+    height: 70vh;
+    transition: all .3s;
+}
+.show-chat{
+    right: 20px;
+    
+}
