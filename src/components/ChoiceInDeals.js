@@ -9,7 +9,6 @@ const ChoiceInDeals = (props) => {
 
 	let summary = props.infopizza.price + base;
 
-
 	const addPizzaWithDiscount = () => {
 		let size = '';
 		if (base === 7) {

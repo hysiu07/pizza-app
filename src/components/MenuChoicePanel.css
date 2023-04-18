@@ -32,16 +32,7 @@
 	background-size: cover;
 	background-position: center;
 }
-.choice-panel-img::before {
-	content: 'PROMOCJA';
-	position: relative;
-	padding: 10px;
-	top: 70px;
-	right: 0px;
-	background-color: red;
-	color: white;
-	font-weight: bold;
-}
+
 .choice-panel-close-btn {
 	position: absolute;
 	padding: 10px;
@@ -63,4 +54,25 @@
 	background-color: white;
 	border-radius: 10px;
 	opacity: 0.7;
+}
+.choice-panel-base-choise {
+	border: 2px solid red;
+}
+.choice-panel-add-btn {
+	padding: 10px 20px;
+}
+.offer {
+	position: relative;
+	top: 60px;
+	width: 130px;
+	height: 40px;
+	background-color: red;
+}
+.offer p {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 40px;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
 }

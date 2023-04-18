@@ -42,7 +42,7 @@
 	text-align: center;
 	border: 1px solid black;
 	cursor: pointer;
-    transition: transform .2s;
+	transition: transform 0.2s;
 }
 .chat-panel-question:hover {
 	transform: scale(1.1);
@@ -54,8 +54,8 @@
 	right: 20px;
 	bottom: 100px;
 }
-.red-border{
-    border: 1px solid red;
+.red-border {
+	border: 1px solid red;
 }
 h3 {
 	text-align: center;

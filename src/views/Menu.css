@@ -1,4 +1,5 @@
-.menu {position: relative;
+.menu {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -55,4 +56,32 @@
 .menu-el-title {
 	margin-bottom: 30px;
 	font-family: 'Merienda', Courier, monospace;
+}
+
+/* ----- Panel box ---- */
+
+.panel-controls {
+	position: absolute;
+	top: 100px;
+	left: -80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 0 20px 10px 20px;
+	width: 200px;
+	height: 500px;
+}
+.panel-control {
+	display: flex;
+	justify-content: flex-end;
+	width: 150px;
+	padding: 5%;
+	border: 1px solid black;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.red-border-menu {
+	border: 1px solid red;
+	width: 200px;
 }

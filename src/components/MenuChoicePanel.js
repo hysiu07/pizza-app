@@ -20,11 +20,11 @@ const MenuChoicePanel = (props) => {
 			size = 'big';
 		}
 		let myPizza = {
-			name: props.infopizza.name,
+			name: props.infoPizza.name,
 			size: size,
 			cost: summary,
-			ingredients: props.infopizza.ingredients,
-			img: props.infopizza.img,
+			ingredients: props.infoPizza.ingredients,
+			img: props.infoPizza.img,
 			id: Date.now(),
 		};
 
@@ -55,7 +55,13 @@ const MenuChoicePanel = (props) => {
 				<div
 					className='choice-panel-img'
 					style={{ backgroundImage: `url(${props.infoPizza.img})` }}
-				></div>
+				>
+					{props.infoPizza.discount && (
+						<div className='offer'>
+							<p>offer</p>
+						</div>
+					)}
+				</div>
 				<div className='choice-panel-info'>
 					<h3>{props.infoPizza.name}</h3>
 					<p>{props.infoPizza.ingredients}</p>
@@ -63,7 +69,7 @@ const MenuChoicePanel = (props) => {
 						<img
 							src='./img2/pizza-size.png'
 							className={
-								'small-size ' + (base === 7 && 'choice-in-deals-base-choise')
+								'small-size ' + (base === 7 && 'choice-panel-base-choise')
 							}
 							alt='pizza-size'
 							onClick={() => {
@@ -73,7 +79,7 @@ const MenuChoicePanel = (props) => {
 						<img
 							src='./img2/pizza-size.png'
 							className={
-								'midt-size ' + (base === 10 && 'choice-in-deals-base-choise')
+								'midt-size ' + (base === 10 && 'choice-panel-base-choise')
 							}
 							alt='pizza-size'
 							onClick={() => {
@@ -83,7 +89,7 @@ const MenuChoicePanel = (props) => {
 						<img
 							src='./img2/pizza-size.png'
 							className={
-								'big-size ' + (base === 15 && 'choice-in-deals-base-choise')
+								'big-size ' + (base === 15 && 'choice-panel-base-choise')
 							}
 							alt='pizza-size'
 							onClick={() => {
@@ -91,9 +97,9 @@ const MenuChoicePanel = (props) => {
 							}}
 						/>
 					</div>
-					<p className='choice-in-deal-summary'> Price: {summary} USD</p>
+					<p className='choice-panel-summary'> Price: {summary} USD</p>
 					<button
-						className='choice-in-deal-add-btn'
+						className='choice-panel-add-btn'
 						onClick={() => {
 							addPizzaWithDiscount();
 						}}

@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;500&display=swap');
 
 .nav {
-	
 	top: 0;
 	width: 100%;
 	background-color: black;
 	color: white;
-	
 }
 .nav-container {
 	display: flex;

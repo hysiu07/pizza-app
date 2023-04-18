@@ -11,7 +11,7 @@ import MovingComponent from 'react-moving-text';
 const Nav = (props) => {
 	const [showBasket, setShowBasket] = useState(true);
 	const { basketValue } = useContext(BasketContext);
-	
+
 	return (
 		<div className='nav'>
 			<div className='nav-container'>
@@ -47,27 +47,26 @@ const Nav = (props) => {
 						setShowBasket(!showBasket);
 					}}
 				>
-					{basketValue.length === 0 ? <BsBasket2Fill
-						className='nav-basket-icon'
-						size='35px'
-					/> : <MovingComponent
-					type='swing'
-					duration='2000ms'
-					delay='0s'
-					direction='normal'
-					timing='ease'
-					iteration='infinite'
-					fillMode='none'
-				>
-					
-				<BsBasket2Fill
-					className='nav-basket-icon'
-					size='35px'
-					color={basketValue.length === 0 ? 'white' : 'red'}
-				/>
-				</MovingComponent>}
-					
-					
+					{basketValue.length === 0 ? (
+						<BsBasket2Fill className='nav-basket-icon' size='35px' />
+					) : (
+						<MovingComponent
+							type='swing'
+							duration='2000ms'
+							delay='0s'
+							direction='normal'
+							timing='ease'
+							iteration='infinite'
+							fillMode='none'
+						>
+							<BsBasket2Fill
+								className='nav-basket-icon'
+								size='35px'
+								color={basketValue.length === 0 ? 'white' : 'red'}
+							/>
+						</MovingComponent>
+					)}
+
 					<Basket showBasket={showBasket} setShowBasket={setShowBasket} />
 				</div>
 			</div>

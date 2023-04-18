@@ -17,7 +17,7 @@
 	padding: 4% 5%;
 }
 
-.you-pizza-components-box{
+.you-pizza-components-box {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

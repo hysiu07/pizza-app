@@ -1,11 +1,15 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import './Menu.css';
-import { BasketContext } from '../context/BasketContex';
 import MenuChoicePanel from '../components/MenuChoicePanel';
+import { BsCupStraw } from 'react-icons/bs';
+import { TbSalad } from 'react-icons/tb';
+import { IoIosIceCream } from 'react-icons/io';
+import { CiPizza } from 'react-icons/ci';
 
 const Menu = (props) => {
 	const [choisePanel, showChoicePanel] = useState(false);
-	const [infoPizza, setInfoPizza] = useState(null)
+	const [infoPizza, setInfoPizza] = useState(null);
+	const [typeOfMenu, setTypeOfMenu] = useState('pizza');
 	return (
 		<div className='menu'>
 			{choisePanel && (
@@ -15,6 +19,48 @@ const Menu = (props) => {
 					infoPizza={infoPizza}
 				/>
 			)}
+			<div className='panel-controls'>
+				<div
+					className={
+						'panel-control ' + (typeOfMenu === 'pizza' && 'red-border-menu')
+					}
+					onClick={() => {
+						setTypeOfMenu('pizza');
+					}}
+				>
+					<CiPizza size={'80px'} />
+				</div>
+				<div
+					className={
+						'panel-control ' + (typeOfMenu === 'drinks' && 'red-border-menu')
+					}
+					onClick={() => {
+						setTypeOfMenu('drinks');
+					}}
+				>
+					<BsCupStraw size={'80px'} />
+				</div>
+				<div
+					className={
+						'panel-control ' + (typeOfMenu === 'salads' && 'red-border-menu')
+					}
+					onClick={() => {
+						setTypeOfMenu('salads');
+					}}
+				>
+					<TbSalad size={'80px'} />
+				</div>
+				<div
+					className={
+						'panel-control ' + (typeOfMenu === 'deserts' && 'red-border-menu')
+					}
+					onClick={() => {
+						setTypeOfMenu('deserts');
+					}}
+				>
+					<IoIosIceCream size={'80px'} />
+				</div>
+			</div>
 
 			{props.pizzas.map((pizza) => {
 				return (
@@ -22,7 +68,7 @@ const Menu = (props) => {
 						className='menu-el'
 						onClick={() => {
 							showChoicePanel(!choisePanel);
-							setInfoPizza(pizza)
+							setInfoPizza(pizza);
 						}}
 					>
 						<div
