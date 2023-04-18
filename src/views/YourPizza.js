@@ -1,13 +1,14 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './YourPizza.css';
 import Ingredients from '../components/your-pizza/Ingredients';
 import SizePizza from '../components/your-pizza/SizePizza';
 import TotalAmount from '../components/your-pizza/TotalAmount';
 import { BasketContext } from '../context/BasketContex';
+import data from '../components/your-pizza/dane.json';
 
 const YourPizza = (props) => {
 	const [costYourPizza, setCostYourPizza] = useState(0);
-	const [base, setBase] = useState(0);
+	const [base, setBase] = useState(10);
 	const [checkedIngredients, setCheckedIngredients] = useState([]);
 	const { basketValue, setBasketValue } = useContext(BasketContext);
 
@@ -26,19 +27,33 @@ const YourPizza = (props) => {
 			cost: costYourPizza,
 			ingredients: checkedIngredients,
 			img: '/img/makepizza.jpg',
-			id:  Date.now(),
+			id: Date.now(),
 		};
 
 		setBasketValue([...basketValue, myPizza]);
 	};
+
+	useEffect(() => {
+		data.map((product) => {
+			product.checked = product.cost === 0 ? true : false;
+			return product;
+		});
+		setCheckedIngredients(data);
+	}, []);
+
+	useEffect(() => {
+		setCostYourPizza(
+			checkedIngredients.reduce((sum, currentEl) => {
+				return currentEl.checked ? sum + currentEl.cost : sum;
+			}, base)
+		);
+	}, [base, checkedIngredients]);
 
 	return (
 		<div className='your-pizza'>
 			<div className='you-pizza-shadow'>
 				<div className='your-pizza-components'>
 					<Ingredients
-						setCostYourPizza={setCostYourPizza}
-						base={base}
 						setCheckedIngredients={setCheckedIngredients}
 						checkedIngredients={checkedIngredients}
 					/>

@@ -27,7 +27,7 @@ const Header = (props) => {
 							iteration='1'
 							fillMode='none'
 						>
-							<h3 className='title-slide-one '>Kup 3</h3>
+							<h3 className='title-slide-one '>Buy 3</h3>
 						</MovingText>
 						<MovingText
 							type='fadeInFromLeft'
@@ -39,7 +39,7 @@ const Header = (props) => {
 							fillMode='none'
 						>
 							<h3 className='title-slide-one '>
-								Zapłać za
+								Pay for
 								<MovingText
 									type='shakeMix'
 									duration='1000ms'
@@ -71,7 +71,7 @@ const Header = (props) => {
 							iteration='1'
 							fillMode='none'
 						>
-							<h3 className='title-slide-two'>Stwórz własną pizze!</h3>
+							<h3 className='title-slide-two'>Make your pizza!</h3>
 						</MovingText>
 					</Carousel.Caption>
 				</Carousel.Item>
@@ -91,7 +91,7 @@ const Header = (props) => {
 							iteration='1'
 							fillMode='none'
 						>
-							<h3 className='title-slide-three'>Najszybsza dostawa!</h3>
+							<h3 className='title-slide-three'>Fastest delivery!</h3>
 						</MovingText>
 					</Carousel.Caption>
 				</Carousel.Item>

@@ -1,14 +1,14 @@
 import React, { useState, useContext } from 'react';
-import './ChoiceInDeals.css';
+import './MenuChoicePanel.css';
 import { GrClose } from 'react-icons/gr';
 import { BasketContext } from '../context/BasketContex';
 
-const ChoiceInDeals = (props) => {
+const MenuChoicePanel = (props) => {
 	const [base, setBase] = useState(10);
 	const { basketValue, setBasketValue } = useContext(BasketContext);
+	console.log(props.infoPizza);
 
-	let summary = props.infopizza.price + base;
-
+	let summary = props.infoPizza.price + base;
 
 	const addPizzaWithDiscount = () => {
 		let size = '';
@@ -30,37 +30,36 @@ const ChoiceInDeals = (props) => {
 
 		setBasketValue([...basketValue, myPizza]);
 	};
-
 	return (
 		<div
-			className='background'
+			className='choice-panel-bcg'
 			onClick={() => {
-				props.closeChoiceInDeals();
+				props.showChoicePanel(!props.choisePanel);
 			}}
 		>
 			<div
-				className=' choice-in-deals-box'
+				className='choice-panel'
 				onClick={(e) => {
 					e.stopPropagation();
 				}}
 			>
 				<div
-					className='choice-in-deals-close-btn'
+					className='choice-panel-close-btn'
 					onClick={() => {
-						props.closeChoiceInDeals();
+						props.showChoicePanel(!props.choisePanel);
 					}}
 				>
 					<GrClose size={'30px'} />
 				</div>
 
 				<div
-					className='choice-in-deals-img'
-					style={{ backgroundImage: `url(${props.infopizza.img})` }}
+					className='choice-panel-img'
+					style={{ backgroundImage: `url(${props.infoPizza.img})` }}
 				></div>
-				<div className='choice-in-deals-info'>
-					<h3>{props.infopizza.name}</h3>
-					<p>{props.infopizza.ingredients}</p>
-					<div className='choice-in-deals-size-pizza'>
+				<div className='choice-panel-info'>
+					<h3>{props.infoPizza.name}</h3>
+					<p>{props.infoPizza.ingredients}</p>
+					<div className='choice-panel-size-pizza'>
 						<img
 							src='./img2/pizza-size.png'
 							className={
@@ -107,4 +106,4 @@ const ChoiceInDeals = (props) => {
 	);
 };
 
-export default ChoiceInDeals;
+export default MenuChoicePanel;

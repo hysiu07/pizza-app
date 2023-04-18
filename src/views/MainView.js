@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './MainView.css';
 import Header from '../components/Header';
 import Deals from '../components/Deals';
@@ -8,19 +8,21 @@ import { BsFillChatRightDotsFill } from 'react-icons/bs';
 import MakePizzaInfo from '../components/MakePizzaInfo';
 
 const MainView = (props) => {
-
-	const [showChat, setShowPanel] = useState(false)
-console.log(showChat);
+	const [showChat, setShowPanel] = useState(false);
+	const [question, setQuestion ] = useState(0)
+	
 
 	return (
 		<div className='main-view'>
 			<div className='chat-btn'>
-				<BsFillChatRightDotsFill onClick={()=>{
-					setShowPanel(!showChat)
-				}}/>
+				<BsFillChatRightDotsFill
+					onClick={() => {
+						setShowPanel(!showChat);
+					}}
+				/>
 			</div>
-			<ChatPanel showChat={showChat}/> 
-			
+			<ChatPanel showChat={showChat} />
+
 			<Header />
 			<Deals pizzas={props.pizzas} />
 			<MakePizzaInfo />

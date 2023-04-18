@@ -5,7 +5,7 @@ import './Deals.css';
 
 const Deals = (props) => {
 	const [choiceInDeals, setChoiceInDeals] = useState(false);
-	const [infoPizza, setInfoPizza] = useState();
+	const [infoPizza, setInfoPizza] = useState(null);
 	const settings = {
 		infinite: true,
 		slidesToShow: 3,
@@ -51,7 +51,6 @@ const Deals = (props) => {
 								</div>
 							);
 						}
-						
 					})}
 				</Slider>
 			</div>
