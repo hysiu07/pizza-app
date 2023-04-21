@@ -3,6 +3,7 @@ import './MainView.css';
 import Header from '../components/Header';
 import Deals from '../components/Deals';
 import ChatPanel from '../components/chat/ChatPanel';
+import Rating from '../components/Rating';
 import { BsFillChatRightDotsFill } from 'react-icons/bs';
 
 import MakePizzaInfo from '../components/MakePizzaInfo';
@@ -25,6 +26,7 @@ const MainView = (props) => {
 			<Header />
 			<Deals pizzas={props.pizzas} />
 			<MakePizzaInfo />
+			<Rating /> 
 		</div>
 	);
 };

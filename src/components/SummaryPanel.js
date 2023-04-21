@@ -9,28 +9,26 @@ const SummaryPanel = (props) => {
 	const [showFormDelivery, setShowFormDelivery] = useState(false);
 
 	const [state, handleSubmit] = useForm('xyyaleqw', {
-		data: {
-            ...Object.assign({}, basketValue)
-			// order: orderMessage,
-			// price: props.priceInBasket,
-		},
+		data: { essa: 'essa' },
 	});
 	const [paidFor, setPaidFor] = useState(false);
 
 	useEffect(() => {
 		setOrderMessage(
 			basketValue.map((el, index) => {
-				return `Order nummber ${index + 1}. Name: ${el.name}.Size: ${
-					el.size
-				}. Price: ${el.cost}. Ingredients: ${el.ingredients}. `;
+				// return `Order nummber ${index + 1}. Name: ${el.name}.Size: ${
+				// 	el.size
+				// }. Price: ${el.cost}. Ingredients: ${el.ingredients}. `;
+				return {
+					order: el.name,
+					size: el.size,
+				};
 			})
 		);
 	}, [basketValue]);
+
 	// xyyaleqw
 
-	const handleApprove = () => {
-		setPaidFor(true);
-	};
 	return (
 		<div
 			className={
@@ -118,10 +116,8 @@ const SummaryPanel = (props) => {
 						<button
 							className='send'
 							type='submit'
-							onClick={() => {
-								console.log(orderMessage);
-								console.log(state.submitting);
-							}}
+							onClick={() => {}}
+							disabled={state.submitting}
 						>
 							wyslij
 						</button>
@@ -152,9 +148,11 @@ const SummaryPanel = (props) => {
 								});
 							}}
 							onApprove={async (data, actions) => {
-								const order = await actions.order.capture();
-								console.log('zapłacone');
-								handleApprove();
+								// const order = await actions.order.capture();
+								alert('dddd');
+								console.log('zaplacono');
+								setPaidFor(!paidFor);
+								handleSubmit();
 							}}
 						/>
 					</PayPalScriptProvider>
