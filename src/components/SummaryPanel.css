@@ -1,0 +1,129 @@
+.summary-panel-bcg {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 400;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	animation: incomme 0.7s linear;
+}
+.summary-panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	position: relative;
+	padding: 3%;
+	width: 80vw;
+	height: 80vh;
+	text-align: center;
+	background-color: white;
+	color: black;
+	transition: all 0.5s;
+}
+.summary-panel-product {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	margin: 5px auto;
+	padding: 10px;
+	width: 60%;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+.summary-panel-product-info {
+	display: flex;
+}
+.summary-panel-product-info p {
+	margin: 0 20px;
+}
+.summary-panel-product-number {
+	font-weight: bold;
+}
+.summary-panel-count {
+	padding: 30px;
+	font-size: 40px;
+	text-decoration: underline;
+}
+.summary-panel-btn {
+	position: absolute;
+	right: 70px;
+	bottom: 70px;
+}
+.summary-panel-btn-next {
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	width: 70px;
+	font-size: 30px;
+}
+.summary-pannel-title {
+	font-family: 'Merienda', Courier, monospace;
+	margin-bottom: 30px;
+}
+.summery-panel-delivery-container {
+	position: fixed;
+	overflow: scroll;
+	padding: 3%;
+	width: 80vw;
+	height: 80vh;
+	text-align: center;
+	background-color: white;
+	color: black;
+	transform: translate(2000px);
+	transition: all 0.7s;
+}
+.summary-panel-delivery {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.summary-panel-delivery-title{
+	font-family: 'Merienda', Courier, monospace;
+}
+.summary-panel-delivery form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.summary-panel-delivery input {
+	padding: 10px;
+	margin: 5px auto;
+	width: 600px;
+}
+.summary-panel-delivery textarea {
+	padding: 10px;
+	margin: 0 auto;
+	width: 600px;
+}
+.summary-panel-delivery-previous-btn {
+	position: absolute;
+	left: 50px;
+	bottom: 50px;
+	width: 70px;
+	font-size: 30px;
+}
+.send {
+	width: 100px;
+	margin: 30px auto;
+
+}
+.move-summary-panel {
+	transform: translate(-2000px);
+}
+.move-delivery-panel {
+	transform: translate(0);
+}
+
+@keyframes incomme {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

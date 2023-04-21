@@ -6,7 +6,7 @@ import { BasketContext } from '../context/BasketContex';
 const MenuChoicePanel = (props) => {
 	const [base, setBase] = useState(10);
 	const { basketValue, setBasketValue } = useContext(BasketContext);
-	console.log(props.infoPizza);
+
 
 	let summary = props.infoPizza.price + base;
 

@@ -5,12 +5,16 @@ import SizePizza from '../components/your-pizza/SizePizza';
 import TotalAmount from '../components/your-pizza/TotalAmount';
 import { BasketContext } from '../context/BasketContex';
 import data from '../components/your-pizza/dane.json';
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 
 const YourPizza = (props) => {
 	const [costYourPizza, setCostYourPizza] = useState(0);
 	const [base, setBase] = useState(10);
 	const [checkedIngredients, setCheckedIngredients] = useState([]);
 	const { basketValue, setBasketValue } = useContext(BasketContext);
+
+	const [ingredientsNames, setIngredientsName] = useState([]);
+	
 
 	const addMyPizza = () => {
 		let size = '';
@@ -25,7 +29,7 @@ const YourPizza = (props) => {
 			name: 'your pizza',
 			size: size,
 			cost: costYourPizza,
-			ingredients: checkedIngredients,
+			ingredients: ingredientsNames,
 			img: '/img/makepizza.jpg',
 			id: Date.now(),
 		};
@@ -47,6 +51,11 @@ const YourPizza = (props) => {
 				return currentEl.checked ? sum + currentEl.cost : sum;
 			}, base)
 		);
+		setIngredientsName(
+			checkedIngredients.filter((el)=>{
+				return el.checked && el.name
+			})
+		)
 	}, [base, checkedIngredients]);
 
 	return (

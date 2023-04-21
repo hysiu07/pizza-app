@@ -3,10 +3,12 @@ import './Basket.css';
 import { GrClose } from 'react-icons/gr';
 import { BiMinus } from 'react-icons/bi';
 import { BasketContext } from '../context/BasketContex';
+import SummaryPanel from './SummaryPanel';
 
 const Basket = (props) => {
 	const { basketValue, setBasketValue } = useContext(BasketContext);
 	const [priceInBasket, setPriceInBasket] = useState(0);
+	const [showSummaryPanel, setShowSummaryPanel] = useState(false);
 
 	useEffect(() => {
 		setPriceInBasket(
@@ -26,6 +28,13 @@ const Basket = (props) => {
 
 	return (
 		<div>
+			{showSummaryPanel && (
+				<SummaryPanel
+					setShowSummaryPanel={setShowSummaryPanel}
+					showSummaryPanel={showSummaryPanel}
+					priceInBasket={priceInBasket}
+				/>
+			)}
 			<div
 				className={'basket ' + (props.showBasket && 'show-basket')}
 				onClick={(e) => {
@@ -69,7 +78,16 @@ const Basket = (props) => {
 						);
 					})}
 
-					<button className='basket-btn'>Pay</button>
+					<button
+						className='basket-btn'
+						disabled={!priceInBasket}
+						onClick={() => {
+							setShowSummaryPanel(!showSummaryPanel);
+							props.setShowBasket(!props.showBasket);
+						}}
+					>
+						Summary
+					</button>
 				</div>
 			</div>
 		</div>
