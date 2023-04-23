@@ -1,13 +1,11 @@
 .rating-component {
+	position: relative;
 	color: white;
 	padding: 50px;
-}
-.rating-add-rate {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	
 }
 .rating-component-title {
 	margin: 30px 30px 0 30px;
@@ -15,49 +13,117 @@
 	font-family: 'Merienda', Courier, monospace;
 }
 .rating-add-rate {
-	position: relative;
-	align-self: flex-end;
-	border: 1px solid black;
-	width: 25%;
+	position: absolute;
+	z-index: 1000;
+	right: 100px;
+	top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	width: 200px;
+	opacity: 0;
+	border-radius: 20px;
+	box-shadow: rgba(238, 238, 245, 0.979) 0px 7px 29px 0px;
+	background-color: rgba(255, 255, 255, 0.8);
+	background-color: black;
+	overflow: hidden;
+	transition: all .5s;
 }
-.rate-add-distription {
+.rating-add-rate input {
+	padding: 5px;
 	width: 80%;
-	height: 50px;
+	margin-bottom: 20px;
+}
+.add-rate-btn {
+	display: block;
+	padding: 10px 20px;
+	margin: 0 auto;
+}
+.buttons {
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+}
+.rate-add-btn-close {
+	padding: 10px 30px;
 }
 .rate-add-btn {
-	margin: 20px;
-	padding: 10px 20px;
+	padding: 10px 30px;
+}
+.rate-add-distription {
+	padding: 5px;
+	width: 80%;
+	height: 50px;
 }
 
 .rating-previous-rate {
 	position: relative;
-	padding: 8%;
+	left: -20px;
+	padding: 3% 3% 3% 8%;
 	margin: 0 auto;
-	height: 250px;
-	width: 70%;
-	border: 1px solid white;
+	height: 200px;
+	width: 60%;
+	color: black;
+	background-color: white;
 	border-radius: 20px;
+	box-shadow: rgba(246, 246, 248, 0.945) 0px 13px 27px -5px,
+		rgba(248, 246, 246, 0.904) 0px 8px 16px -8px;
+}
+.rating-previous-rate h4 {
+	position: relative;
+	left: 30px;
 }
 .rating-carousel {
 	position: relative;
-	left: 300px;
+	padding: 30px;
+	left: 200px;
 	width: 45%;
 }
 
 .rating-add-stars {
-	margin: 0 auto;
+	margin: 15px auto;
+}
+.rating-add-stars-in-rate {
+	margin: 30px auto;
 }
 .rating-previous-rate-img {
-
-	left: 0px;
-	top: 0px;
+	position: absolute;
+	z-index: 700;
+	left: -40px;
+	top: -20px;
 
 	background-size: cover;
 	background-position: center;
-	height: 100px;
-	width: 100px;
+	height: 120px;
+	width: 120px;
 	border-radius: 50%;
 }
-.rating-previous-rate-text{
+.rating-previous-rate-text {
+	display: flex;
+	flex-direction: column;
 	padding-left: 40px;
+}
+.rating-previous-rate-text span {
+	margin-bottom: 0;
+	margin-left: 25px;
+}
+.quote-right {
+	position: relative;
+	left: 10px;
+	top: 15px;
+}
+
+.rating-carousel-box {
+	padding: 30px 0;
+}
+button.slick-prev::before,
+button.slick-next::before {
+	display: none;
+}
+
+.show-add-rate-panel{
+	opacity: 1;
+	width: 400px;
 }
