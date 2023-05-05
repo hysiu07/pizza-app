@@ -26,7 +26,7 @@ const Deals = (props) => {
 			)}
 
 			<h2 className='deals-title'>Deal of day!</h2>
-			<p className='deals-text'>Dzisiejsze promocje które mamy w ofercie!</p>
+		
 			<div className='deal-cards'>
 				<Slider {...settings}>
 					{props.pizzas.map((pizza, index) => {

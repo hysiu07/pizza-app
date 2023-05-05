@@ -1,11 +1,12 @@
 import React from 'react';
 import './MakePizzaInfo.css';
+import makePizza from '../img/makepizza.jpg'
 
 const MakePizzaInfo = () => {
 	return (
 		<div
 			style={{
-				backgroundImage: url('/public/img/makepizza.jpg'),
+				backgroundImage: `url(${makePizza})`,
 			}}
 			className='make-pizza-info'
 		>

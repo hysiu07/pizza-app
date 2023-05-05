@@ -5,8 +5,6 @@
 	color: white;
 	background-position: center;
 	background-size: cover;
-	background-image: url('/public/img/pizza-rating.jpg');
-	
 }
 .rating-component-title {
 	margin: 30px 30px 0 30px;
@@ -30,7 +28,7 @@
 	background-color: rgba(255, 255, 255, 0.8);
 	background-color: black;
 	overflow: hidden;
-	transition: all .5s;
+	transition: all 0.5s;
 }
 .rating-add-rate input {
 	padding: 5px;
@@ -124,7 +122,7 @@ button.slick-next::before {
 	display: none;
 }
 
-.show-add-rate-panel{
+.show-add-rate-panel {
 	opacity: 1;
 	width: 400px;
 }

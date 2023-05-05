@@ -8,7 +8,7 @@ const MenuChoicePanel = (props) => {
 	const { basketValue, setBasketValue } = useContext(BasketContext);
 
 	let summary = props.infoPizza.price + base;
-	console.log(props.infoPizza.img);
+
 	const addPizzaWithDiscount = () => {
 		let size = '';
 		if (base === 7) {

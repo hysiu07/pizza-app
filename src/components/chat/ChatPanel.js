@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './ChatPanel.css';
 import MovingText from 'react-moving-text';
 
@@ -6,24 +6,6 @@ const ChatPanel = (props) => {
 	const [responsMario, setResponsMario] = useState(
 		`Hi! I'm Mario. How can i help you?`
 	);
-	// const [animation, setAnimation] = useState(null);
-
-	// useEffect(() => {
-	// 	setAnimation(
-	// 		<MovingText
-	// 			type='fadeInFromRight'
-	// 			duration='2000ms'
-	// 			delay='1500ms'
-	// 			direction='normal'
-	// 			timing='ease'
-	// 			iteration='1'
-	// 			fillMode='none'
-	// 		>
-	// 			<p>{responsMario}</p>
-	// 		</MovingText>
-	// 	);
-	// }, [responsMario]);
-
 	return (
 		<div className={`chat-panel ` + (props.showChat && 'show-chat')}>
 			<h3>Chat with Mario</h3>

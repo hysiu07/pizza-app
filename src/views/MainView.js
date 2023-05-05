@@ -11,7 +11,6 @@ import MakePizzaInfo from '../components/MakePizzaInfo';
 
 const MainView = (props) => {
 	const [showChat, setShowPanel] = useState(false);
-	const [question, setQuestion] = useState(0);
 
 	return (
 		<div className='main-view'>

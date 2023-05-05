@@ -6,15 +6,15 @@ import { BasketContext } from '../context/BasketContex';
 import SummaryPanel from './SummaryPanel';
 
 const Basket = (props) => {
-	const { basketValue, setBasketValue } = useContext(BasketContext);
 	const [priceInBasket, setPriceInBasket] = useState(0);
 	const [showSummaryPanel, setShowSummaryPanel] = useState(false);
+	const { basketValue, setBasketValue } = useContext(BasketContext);
 
 	useEffect(() => {
 		setPriceInBasket(
 			basketValue.reduce((sum, currentPrice) => {
 				return sum + currentPrice.cost;
-			}, 0)
+			},0)
 		);
 	});
 

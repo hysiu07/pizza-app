@@ -1,6 +1,6 @@
 import React from 'react';
 import './Map.css';
-import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import markerIconPng from 'leaflet/dist/images/marker-icon.png';
 import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -11,7 +11,7 @@ const Map = () => {
 
 	return (
 		<div className='map-container'>
-			<h2 className='map-title'>You find us here!</h2>
+			<h2 className='map-title'>You can find us here!</h2>
 			<div className='map-boxes'>
 				<div className='map-box-text'>
 					<p>115 Burnt Ash Rd, London</p>

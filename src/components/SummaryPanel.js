@@ -5,29 +5,12 @@ import { BasketContext } from '../context/BasketContex';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 const SummaryPanel = (props) => {
 	const { basketValue } = useContext(BasketContext);
-	const [orderMessage, setOrderMessage] = useState('');
 	const [showFormDelivery, setShowFormDelivery] = useState(false);
 
 	const [state, handleSubmit] = useForm('xyyaleqw', {
-		data: { essa: 'essa' },
+		data: 'info about order',
 	});
 	const [paidFor, setPaidFor] = useState(false);
-
-	useEffect(() => {
-		setOrderMessage(
-			basketValue.map((el, index) => {
-				// return `Order nummber ${index + 1}. Name: ${el.name}.Size: ${
-				// 	el.size
-				// }. Price: ${el.cost}. Ingredients: ${el.ingredients}. `;
-				return {
-					order: el.name,
-					size: el.size,
-				};
-			})
-		);
-	}, [basketValue]);
-
-	// xyyaleqw
 
 	return (
 		<div
@@ -119,14 +102,14 @@ const SummaryPanel = (props) => {
 							onClick={() => {}}
 							disabled={state.submitting}
 						>
-							wyslij
+							Send
 						</button>
 					</form>
-					{/* {state.submitting && <div>Thank you for signing up!</div>} */}
+
 					<PayPalScriptProvider
 						options={{
 							'client-id':
-								'AVBcBnkBgM-VXZg2xT6SKoGXaq1XUXS-t4j0tO4e-SmacihGBW_sP0x77x1EYRlB84COJ5ncQaUOBbRy',
+								'Client ID, paste here',
 						}}
 					>
 						<PayPalButtons
@@ -148,9 +131,7 @@ const SummaryPanel = (props) => {
 								});
 							}}
 							onApprove={async (data, actions) => {
-								// const order = await actions.order.capture();
-								alert('dddd');
-								console.log('zaplacono');
+								alert('its working');
 								setPaidFor(!paidFor);
 								handleSubmit();
 							}}

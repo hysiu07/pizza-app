@@ -4,11 +4,11 @@ import ReactStars from 'react-rating-stars-component';
 import Slider from 'react-slick';
 import { ImQuotesLeft } from 'react-icons/im';
 import { ImQuotesRight } from 'react-icons/im';
-import { layerGroup } from 'leaflet';
+import pizzaRating from '../img/pizza-rating.jpg';
 
 const Rating = (props) => {
 	const [addRatePanel, setAddRatePanel] = useState(false);
-	const [ratings, setRatings] = useState([
+	const [ratings] = useState([
 		{
 			name: 'Eliza',
 			discription: 'Best restaurant in all of London!',
@@ -69,9 +69,7 @@ const Rating = (props) => {
 		<div
 			className='rating-component'
 			style={{
-				backgroundImage: url(
-					'https://hysiu07.github.io/pizza-app/public/img/pizza-rating.jpg'
-				),
+				backgroundImage: `url(${pizzaRating})`,
 			}}
 		>
 			<h2 className='rating-component-title'>Our ratings</h2>
