@@ -5,9 +5,7 @@ const MakePizzaInfo = () => {
 	return (
 		<div
 			style={{
-				backgroundImage: `url(${
-					process.env.PUBLIC_URL + '/blob/master/public' + '/img/makepizza.jpg'
-				})`,
+				backgroundImage: url('/public/img/makepizza.jpg'),
 			}}
 			className='make-pizza-info'
 		>

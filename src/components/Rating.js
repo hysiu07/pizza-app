@@ -65,14 +65,11 @@ const Rating = (props) => {
 		autoplaySpeed: 3000,
 	};
 
-
 	return (
 		<div
 			className='rating-component'
 			style={{
-				backgroundImage: `url(${
-					process.env.PUBLIC_URL + '/img/pizza-rating.jpg'
-				})`,
+				backgroundImage: url('/public/img/pizza-rating.jpg'),
 			}}
 		>
 			<h2 className='rating-component-title'>Our ratings</h2>
