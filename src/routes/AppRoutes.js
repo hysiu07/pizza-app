@@ -7,7 +7,7 @@ import Menu from '../views/Menu';
 const AppRoutes = (props) => {
 	return (
 		<Routes>
-			<Route path='/' element={<MainView pizzas={props.pizzas} />} />
+			<Route path='/pizza-app' element={<MainView pizzas={props.pizzas} />} />
 			<Route path='/menu' element={<Menu pizzas={props.pizzas} />} />
 			<Route path='/your-pizza' element={<YourPizza />} />
 		</Routes>
