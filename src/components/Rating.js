@@ -68,9 +68,11 @@ const Rating = (props) => {
 	return (
 		<div
 			className='rating-component'
-			// style={{
-			// 	backgroundImage: url('/public/img/pizza-rating.jpg'),
-			// }}
+			style={{
+				backgroundImage: url(
+					'https://hysiu07.github.io/pizza-app/public/img/pizza-rating.jpg'
+				),
+			}}
 		>
 			<h2 className='rating-component-title'>Our ratings</h2>
 
