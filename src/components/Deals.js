@@ -45,7 +45,11 @@ const Deals = (props) => {
 										style={{ backgroundImage: pizza.img }}
 									></div>
 
-									<img src={pizza.img} alt='' className='slider-img' />
+									<img
+										src={process.env.PUBLIC_URL + pizza.img}
+										alt=''
+										className='slider-img'
+									/>
 									<h3 className='slider-title'>{pizza.name}</h3>
 									<p>{pizza.ingredients}</p>
 								</div>

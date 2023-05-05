@@ -50,7 +50,6 @@ const Basket = (props) => {
 					<GrClose />
 				</div>
 				<h2 className='basket-title'>Your basket!</h2>
-
 				<p className='basket-summary'>{priceInBasket} USD</p>
 				<div className='basket-elements'>
 					{basketValue.map((el, index) => {
@@ -58,7 +57,9 @@ const Basket = (props) => {
 							<div className='basket-element' key={index} id={el.id}>
 								<div
 									className='basket-element-img'
-									style={{ backgroundImage: `url(${el.img})` }}
+									style={{
+										backgroundImage: `url(${process.env.PUBLIC_URL + el.img})`,
+									}}
 								></div>
 								<div className='basket-element-text'>
 									<p className='element-title'>{el.name}</p>
@@ -77,7 +78,6 @@ const Basket = (props) => {
 							</div>
 						);
 					})}
-
 					<button
 						className='basket-btn'
 						disabled={!priceInBasket}

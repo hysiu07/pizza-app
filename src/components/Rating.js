@@ -12,32 +12,29 @@ const Rating = (props) => {
 		{
 			name: 'Eliza',
 			discription: 'Best restaurant in all of London!',
-			img: `url('/img/adult-1.jpg')`,
+			img: '/img/adult-1.jpg',
 			ratingValue: 4,
 		},
 		{
-			name: 'DuckFace007',
+			name: 'Bart',
 			discription: 'Amazing place!',
-			img: `url('/img/adult-2.jpg')`,
+			img: '/img/adult-2.jpg',
 			ratingValue: 5,
 		},
 		{
 			name: 'Daniel',
 			discription: 'Very well meals!',
-			img: `url('/img/adult-3.jpg')`,
+			img: '/img/adult-3.jpg',
 			ratingValue: 5,
 		},
 	]);
 
-	const [rateInfo, setRateInfo] = useState(
-		{
-			name: '',
-			discription: '',
-			img: `url('/img/user-1.jpg')`,
-			ratingValue: 0,
-		},
-	
-	);
+	const [rateInfo, setRateInfo] = useState({
+		name: '',
+		discription: '',
+		img: `url('/img/user-1.jpg')`,
+		ratingValue: 0,
+	});
 	const handleTakeInfo = (e) => {
 		const target = e.target;
 		const name = target.name;
@@ -68,16 +65,15 @@ const Rating = (props) => {
 		autoplaySpeed: 3000,
 	};
 
-	// const addRate = () => {
-	// 	// const newRate = {
-	// 	// 	name:
-	// 	// }
-	// };
 
 	return (
 		<div
 			className='rating-component'
-			style={{ backgroundImage: `url('/img/pizza-rating.jpg')` }}
+			style={{
+				backgroundImage: `url(${
+					process.env.PUBLIC_URL + '/img/pizza-rating.jpg'
+				})`,
+			}}
 		>
 			<h2 className='rating-component-title'>Our ratings</h2>
 
@@ -96,45 +92,47 @@ const Rating = (props) => {
 			>
 				Add your rate!
 			</button>
-			
-				<div className={'rating-add-rate ' + (addRatePanel && 'show-add-rate-panel')}>
-					<h3>Add your rate!</h3>
-					<input
-						type='text'
-						name='name'
-						id='name'
-						placeholder='Name'
-						onChange={handleTakeInfo}
-					/>
-					<textarea
-						onChange={handleTakeInfo}
-						className='rate-add-distription'
-						name='discription'
-						placeholder='Your discription'
-					></textarea>
-					<ReactStars
-						classNames={'rating-add-stars'}
-						count={5}
-						onChange={ratingChanged}
-						size={24}
-						activeColor='#ffd700'
-					/>
-					<div className='buttons'>
-						{' '}
-						<button
-							onClick={() => {
-								setAddRatePanel(false);
-							}}
-							className='rate-add-btn-close'
-						>
-							Close
-						</button>
-						<button className='rate-add-btn' onClick={show}>
-							Add
-						</button>
-					</div>
+
+			<div
+				className={'rating-add-rate ' + (addRatePanel && 'show-add-rate-panel')}
+			>
+				<h3>Add your rate!</h3>
+				<input
+					type='text'
+					name='name'
+					id='name'
+					placeholder='Name'
+					onChange={handleTakeInfo}
+				/>
+				<textarea
+					onChange={handleTakeInfo}
+					className='rate-add-distription'
+					name='discription'
+					placeholder='Your discription'
+				></textarea>
+				<ReactStars
+					classNames={'rating-add-stars'}
+					count={5}
+					onChange={ratingChanged}
+					size={24}
+					activeColor='#ffd700'
+				/>
+				<div className='buttons'>
+					{' '}
+					<button
+						onClick={() => {
+							setAddRatePanel(false);
+						}}
+						className='rate-add-btn-close'
+					>
+						Close
+					</button>
+					<button className='rate-add-btn' onClick={show}>
+						Add
+					</button>
 				</div>
-			
+			</div>
+
 			<div className='rating-carousel'>
 				<Slider {...settings}>
 					{ratings.map((el) => {
@@ -144,7 +142,11 @@ const Rating = (props) => {
 									<h4>{el.name}</h4>
 									<div
 										className='rating-previous-rate-img'
-										style={{ backgroundImage: el.img }}
+										style={{
+											backgroundImage: `url(${
+												process.env.PUBLIC_URL + el.img
+											})`,
+										}}
 									></div>
 									<div className='rating-previous-rate-text'>
 										<ImQuotesLeft className='quote-left' />

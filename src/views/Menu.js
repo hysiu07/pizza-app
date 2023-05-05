@@ -73,7 +73,11 @@ const Menu = (props) => {
 					>
 						<div
 							className='menu-el-img'
-							style={{ backgroundImage: `url(${pizza.img})` }}
+							style={{
+								backgroundImage: `url(${
+									process.env.PUBLIC_URL + pizza.img
+								})`,
+							}}
 						>
 							{pizza.discount && (
 								<div className='menu-el-special-offer'>OFFER</div>

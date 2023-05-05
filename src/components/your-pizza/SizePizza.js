@@ -7,7 +7,7 @@ const SizePizza = (props) => {
 			<h2 className='size-pizza-title'>Choice size your pizza!</h2>
 			<div className='size-pizza-img'>
 				<img
-					src='./img2/pizza-size.png'
+					src={process.env.PUBLIC_URL + '/img2/pizza-size.png'}
 					className={'small-size ' + (props.base === 7 && 'base-choise')}
 					alt='pizza-size'
 					onClick={() => {
@@ -15,7 +15,7 @@ const SizePizza = (props) => {
 					}}
 				/>
 				<img
-					src='./img2/pizza-size.png'
+					src={process.env.PUBLIC_URL + '/img2/pizza-size.png'}
 					className={'midt-size ' + (props.base === 10 && 'base-choise')}
 					alt='pizza-size'
 					onClick={() => {
@@ -23,7 +23,7 @@ const SizePizza = (props) => {
 					}}
 				/>
 				<img
-					src='./img2/pizza-size.png'
+					src={process.env.PUBLIC_URL + '/img2/pizza-size.png'}
 					className={'big-size ' + (props.base === 15 && 'base-choise')}
 					alt='pizza-size'
 					onClick={() => {

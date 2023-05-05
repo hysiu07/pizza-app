@@ -7,9 +7,8 @@ const MenuChoicePanel = (props) => {
 	const [base, setBase] = useState(10);
 	const { basketValue, setBasketValue } = useContext(BasketContext);
 
-
 	let summary = props.infoPizza.price + base;
-
+	console.log(props.infoPizza.img);
 	const addPizzaWithDiscount = () => {
 		let size = '';
 		if (base === 7) {
@@ -54,7 +53,11 @@ const MenuChoicePanel = (props) => {
 
 				<div
 					className='choice-panel-img'
-					style={{ backgroundImage: `url(${props.infoPizza.img})` }}
+					style={{
+						backgroundImage: `url(${
+							process.env.PUBLIC_URL + props.infoPizza.img
+						})`,
+					}}
 				>
 					{props.infoPizza.discount && (
 						<div className='offer'>
@@ -67,7 +70,7 @@ const MenuChoicePanel = (props) => {
 					<p>{props.infoPizza.ingredients}</p>
 					<div className='choice-panel-size-pizza'>
 						<img
-							src='./img2/pizza-size.png'
+							src={process.env.PUBLIC_URL + '/img2/pizza-size.png'}
 							className={
 								'small-size ' + (base === 7 && 'choice-panel-base-choise')
 							}
@@ -77,7 +80,7 @@ const MenuChoicePanel = (props) => {
 							}}
 						/>
 						<img
-							src='./img2/pizza-size.png'
+							src={process.env.PUBLIC_URL + '/img2/pizza-size.png'}
 							className={
 								'midt-size ' + (base === 10 && 'choice-panel-base-choise')
 							}
@@ -87,7 +90,7 @@ const MenuChoicePanel = (props) => {
 							}}
 						/>
 						<img
-							src='./img2/pizza-size.png'
+							src={process.env.PUBLIC_URL + '/img2/pizza-size.png'}
 							className={
 								'big-size ' + (base === 15 && 'choice-panel-base-choise')
 							}

@@ -17,7 +17,7 @@ const pizzas = [
 		name: 'El Clasico',
 		price: 16,
 		discount: true,
-		ingredients: 'ham, champignons, chees mozzarella, herb tomato sause',
+		ingredients: 'ham, champignons, chees, mozzarella, herb tomato sause',
 		img: '/img/el-clasico.jpg',
 	},
 	{
