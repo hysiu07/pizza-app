@@ -12,6 +12,7 @@ function App() {
 		<div className='App'>
 			<BasketContext.Provider value={{ basketValue, setBasketValue }}>
 				<Nav />
+				<MainView pizzas={props.pizzas} />
 				<AppRoutes pizzas={pizzas} />
 			</BasketContext.Provider>
 		</div>
