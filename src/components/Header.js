@@ -71,7 +71,10 @@ const Header = (props) => {
 							iteration='1'
 							fillMode='none'
 						>
-							<h3 className='title-slide-two'>Make your pizza!</h3>
+							<h3 className='title-slide-two'>
+								Make <br/> your <br/>
+								pizza!
+							</h3>
 						</MovingText>
 					</Carousel.Caption>
 				</Carousel.Item>

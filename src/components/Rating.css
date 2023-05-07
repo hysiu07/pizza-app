@@ -72,7 +72,7 @@
 }
 .rating-previous-rate h4 {
 	position: relative;
-	left: 30px;
+	left: 40px;
 }
 .rating-carousel {
 	position: relative;
@@ -125,4 +125,13 @@ button.slick-next::before {
 .show-add-rate-panel {
 	opacity: 1;
 	width: 400px;
+}
+@media (min-width: 996px) and (max-width: 1400px) {
+	.rating-carousel {
+		left: 100px;
+		width: 60%;
+	}
+	.rating-previous-rate h4 {
+		left: 50px;
+	}
 }

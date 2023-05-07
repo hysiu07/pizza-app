@@ -85,3 +85,9 @@
 	border: 1px solid red;
 	width: 200px;
 }
+@media (min-width: 996px) and (max-width: 1150px) {
+	.menu-el {
+		width: 55%;
+		height: 250px;
+	}
+}

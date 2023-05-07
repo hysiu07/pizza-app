@@ -132,9 +132,9 @@ const Rating = (props) => {
 
 			<div className='rating-carousel'>
 				<Slider {...settings}>
-					{ratings.map((el) => {
+					{ratings.map((el, index) => {
 						return (
-							<div className='rating-carousel-box'>
+							<div className='rating-carousel-box' key={index}>
 								<div className='rating-previous-rate'>
 									<h4>{el.name}</h4>
 									<div

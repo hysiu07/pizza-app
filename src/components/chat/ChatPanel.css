@@ -60,3 +60,11 @@
 h3 {
 	text-align: center;
 }
+@media (min-width: 996px) and (max-width: 1400px) {
+	.chat-panel {
+		width: 35%;
+	}
+	.chat-panel-cook-box {
+		padding-right: 80px;
+	}
+}

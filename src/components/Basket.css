@@ -64,7 +64,7 @@
 	justify-content: center;
 	align-items: center;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
 	text-transform: uppercase;
 	height: 100%;
 	width: 30%;
@@ -89,4 +89,9 @@
 
 .show-basket {
 	right: -600px;
+}
+@media (min-width: 996px) and (max-width: 1400px) {
+	.basket {
+		width: 45vh;
+	}
 }

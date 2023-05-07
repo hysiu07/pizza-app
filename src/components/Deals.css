@@ -44,3 +44,11 @@
 .slider-ingradiens {
 	font-size: 14px;
 }
+@media (min-width: 996px) and (max-width: 1200px) {
+	.slider-img {
+		width: 250px;
+	}
+	.slider-box::before {
+		right: 71px;
+	}
+}

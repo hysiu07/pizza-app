@@ -10,21 +10,58 @@
 .title-slide-one {
 	position: relative;
 	bottom: 220px;
-	font-size: 100px;
+	font-size: 120px;
 	margin-bottom: 30px;
 }
 .title-slide-one span {
 	color: red;
-	font-size: 120px;
+	font-size: 140px;
 }
 .title-slide-two {
 	position: relative;
-	bottom: 500px;
+	bottom: 200px;
 	left: 350px;
-	font-size: 70px;
+	font-size: 100px;
 }
 .title-slide-three {
 	position: relative;
 	bottom: 400px;
 	font-size: 100px;
+}
+@media (min-width: 996px) and (max-width: 1200px) {
+	.title-slide-one {
+		position: relative;
+		bottom: 100px;
+		font-size: 120px;
+	}
+	.title-slide-one span {
+		font-size: 150px;
+	}
+	.title-slide-two {
+		bottom: 200px;
+		left: 250px;
+		font-size: 100px;
+	}
+	.title-slide-three {
+		bottom: 300px;
+		font-size: 120px;
+	}
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+	.title-slide-one {
+		position: relative;
+		bottom: 100px;
+	}
+	.title-slide-one span {
+		font-size: 150px;
+	}
+	.title-slide-two {
+		bottom: 200px;
+		left: 350px;
+		font-size: 100px;
+	}
+	.title-slide-three {
+		bottom: 400px;
+		font-size: 100px;
+	}
 }

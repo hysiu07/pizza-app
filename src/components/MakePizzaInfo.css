@@ -1,13 +1,23 @@
 .make-pizza-info {
-	height: 500px;
+	height: 400px;
 	width: 100%;
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-
 }
 .make-pizza-info-shadow {
 	width: 100%;
 	height: 100%;
+	text-align: center;
+	color: white;
 	background-color: rgba(0, 0, 0, 0.6);
+}
+.make-pizza-title {
+	padding: 50px 0;
+	font-family: 'Merienda', Courier, monospace;
+}
+.make-pizza-discription {
+	margin: 0 auto;
+	width: 60%;
+	font-size: 20px;
 }
