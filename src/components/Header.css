@@ -9,7 +9,7 @@
 
 .title-slide-one {
 	position: relative;
-	bottom: 220px;
+	bottom: 100px;
 	font-size: 120px;
 	margin-bottom: 30px;
 }
@@ -30,9 +30,7 @@
 }
 @media (min-width: 996px) and (max-width: 1200px) {
 	.title-slide-one {
-		position: relative;
 		bottom: 100px;
-		font-size: 120px;
 	}
 	.title-slide-one span {
 		font-size: 150px;
